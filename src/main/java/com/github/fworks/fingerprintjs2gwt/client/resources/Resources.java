@@ -4,14 +4,31 @@ import com.google.gwt.core.client.GWT;
 import com.google.gwt.resources.client.ClientBundle;
 import com.google.gwt.resources.client.TextResource;
 
+/**
+ * Resource client bundle for the js files.
+ * 
+ * @author flaviolcastro
+ *
+ */
 public interface Resources extends ClientBundle {
 
-	public static Resources RESOURCES = GWT.create(Resources.class);
+  /** static resource object. */
+  public static final Resources RESOURCES = GWT.create(Resources.class);
 
-	@Source("js/fingerprint2.js")
-	TextResource fullScript();
+  /**
+   * Full js file.
+   * 
+   * @return TextResource with the js content.
+   */
+  @Source("js/fingerprint2.js")
+  TextResource fullScript();
 
-	@Source("js/fingerprint2.min.js")
-	TextResource minScript();
+  /**
+   * Min js file.
+   * 
+   * @return TextResource with the js content.
+   */
+  @Source("js/fingerprint2.min.js")
+  TextResource minScript();
 
 }
